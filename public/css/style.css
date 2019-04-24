@@ -1,0 +1,28 @@
+/* layout */
+html, body{width:100%;position:relative;z-index:1;background:#006cce}
+.ie8 body{min-width:94em}
+.ie7 body{overflow-x:hidden;}
+body.no{overflow:hidden}
+.allwrap{position:relative;min-width:94em;z-index:1;}
+.Header, .container, .footer{position:relative;z-index:1;}
+.section{width:94em;margin:0 auto;position:relative;}
+.section:after{content:'';display:block;clear:both}
+.container{overflow:hidden;}
+.blind{display:none;position:absolute;z-index:1000;left:0;top:0;right:0;bottom:0;background:url(../images/common/bg_black50.png)}
+@media only screen and (max-width:94em){
+	.allwrap{min-width: 100%}
+	.section{width:100%;}
+}
+
+*[class*="icon-"]{
+	display:block;
+	height:4em;
+	width:4em;
+	background-repeat: no-repeat;
+	background-size: 3em;
+	background-position: center;
+}
+
+*[class*="icon-menu"]{
+	background-image: url(../images/icon-menu.png);
+}
