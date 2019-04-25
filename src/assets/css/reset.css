@@ -6,18 +6,18 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local(★), local('NotoSansKR'), local('Noto Sans KR');
-	src: url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/NotoSansKR-Regular.woff') format('woff'),
-		 url('../fonts/NotoSansKR-Regular.ttf') format('opentype');
+	src: url('~@/assets/fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('~@/assets/fonts/NotoSansKR-Regular.woff') format('woff'),
+		 url('~@/assets/fonts/NotoSansKR-Regular.ttf') format('opentype');
 }
 @font-face {
 	font-family: "NotoSansKR";
 	font-style: normal;
 	font-weight: bold;
 	src: local(★), local('NotoSansKR'), local('Noto Sans KR');
-	src: url('../fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/NotoSansKR-Bold.woff') format('woff'),
-		 url('../fonts/NotoSansKR-Bold.otf') format('opentype');
+	src: url('~@/assets/fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('~@/assets/fonts/NotoSansKR-Bold.woff') format('woff'),
+		 url('~@/assets/fonts/NotoSansKR-Bold.ttf') format('opentype');
 }
 
 /**** reset.css ****/
@@ -79,8 +79,7 @@
 	input::-ms-input-placeholder { color: #d6d0db;}
 	input::-moz-placeholder { color: #d6d0db;}
 
-	input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"]{-webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius: 0px;} /* ����� ���� ���� */
-
+	input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"]{-webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius: 0px;} 
 	textarea{display:block;border:1px solid #cbcbcb;padding:0.4em;box-sizing:content-box}
 	textarea[size="100"]{width:98%}
 	textarea::-webkit-input-placeholder { color: #d6d0db;}
@@ -223,9 +222,9 @@
 	.ui-datepicker .ui-datepicker-header {position: relative;padding: .2em 0;}
 	.ui-datepicker .ui-datepicker-prev,
 	.ui-datepicker .ui-datepicker-next {position:absolute;top:50%;margin-top:-0.9em;width:1.8em;height: 1.8em;text-indent:-99999px;border-radius:.5em}
-	.ui-datepicker .ui-datepicker-prev {left:0px;background:#aaa url(images/datepicker_prev.png) 50% 50% no-repeat;background-size:1em auto}
+	.ui-datepicker .ui-datepicker-prev {left:0px;background:#aaa 50% 50% no-repeat;background-size:1em auto}
 	.ui-datepicker .ui-datepicker-prev-hover.ui-state-hover{background-color:#666}
-	.ui-datepicker .ui-datepicker-next {right:0px;background:#aaa url(images/datepicker_next.png) 50% 50% no-repeat;background-size:1em auto}
+	.ui-datepicker .ui-datepicker-next {right:0px;background:#aaa  50% 50% no-repeat;background-size:1em auto}
 	.ui-datepicker .ui-datepicker-next-hover.ui-state-hover{background-color:#666}
 	.ui-datepicker .ui-datepicker-prev span,
 	.ui-datepicker .ui-datepicker-next span {overflow:hidden;display: block;position: absolute;left: 50%;margin-left: -8px;top: 50%;margin-top: -8px;}

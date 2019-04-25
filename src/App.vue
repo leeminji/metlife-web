@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="allwrap">
-    <Header></Header>
+    <Header :menuList="menuList"></Header>
+
     <!-- 본문 -->
     <div class="Container">
       <div class="MainSection MainSection-1" id="MainSection-1">
@@ -19,18 +20,33 @@
         </section>
       </div>
       <div class="MainSection MainSection-2" id="MainSection-2">
-        <section class="section"></section>
+        <section class="section">
+          <h2><span>참가혜택</span></h2>
+        </section>
       </div>
       <div class="MainSection MainSection-3" id="MainSection-3">
-        <section class="section"></section>
+        <section class="section">
+          <h2><span>공모요강</span></h2>
+
+        </section>
       </div>
       <div class="MainSection MainSection-4" id="MainSection-4">
-        <section class="section"></section>
+        <section class="section">
+          <h2><span>참가방법</span></h2>
+        </section>
       </div>
       <div class="MainSection MainSection-5" id="MainSection-5">
-        <section class="section"></section>
+        <section class="section">
+          <h2><span>사업설명회</span></h2>
+        </section>
+      </div>
+      <div class="MainSection MainSection-6" id="MainSection-6">
+        <section class="section">
+          <h2><span>공지사항</span></h2>
+        </section>
       </div>
     </div>
+
     <!-- //본문 -->
     <footer class="Footer">
       <section class="section">
@@ -39,11 +55,11 @@
         <div class="Sponsor">
           <h3 class="Sponsor__title"><span>주최 &middot; 주관</span></h3>
           <dl class="Sponsor__list">
-            <dt class="Sponsor__logo"><span><img src="/images/logo-sponsor-1.png" alt=""></span></dt>
+            <dt class="Sponsor__logo"><span><img src="~@/assets/images/logo-sponsor-1.png" alt="스폰서로고1"></span></dt>
             <dd class="Sponsor__explain">
               <p>메트라잉프재단은..</p>
             </dd>
-            <dt class="Sponsor__logo pt10"><span><img src="/images/logo-sponsor-2.png" alt=""></span></dt>
+            <dt class="Sponsor__logo pt10"><span><img src="~@/assets/images/logo-sponsor-2.png" alt="스폰서로고2"></span></dt>
             <dd class="Sponsor__explain">
               <p>메트라잉프재단은..</p>
             </dd>
@@ -57,8 +73,6 @@
 
 <script>
 import Header from './components/Header.vue'
-
-
 export default {
   data(){
     return {
@@ -71,21 +85,16 @@ export default {
     Header
   },
   mounted(){
-    console.log("mounted");
   },
   created(){
-    console.log("created");
-  },
-  methods : {
-    setMenuList(){
-      
-    }
   }
-
 }
 </script>
 
 <style lang="scss">
+@import '~@/assets/css/reset.css';
+@import '~@/assets/css/style.css';
+
 .Container{
 }
 .Program{
@@ -96,7 +105,7 @@ export default {
     color:#fff;
     .en{
       font-size:5em;
-      letter-spacing: -.05em;
+      letter-spacing: -.02em;
       font-weight: bold;
       display: block;
     }
@@ -127,6 +136,10 @@ export default {
   &__button{
     .ButtonType-1{
       margin-right:0.6rem;
+      &:hover{
+        transition: all 1s;
+        background: rgba(255,255,255,0.2);
+      }
     }
   }
 }
@@ -164,7 +177,15 @@ export default {
   }
   &-4{
     height:30em;
-    background:#fff
+    background:#006cce
+  }
+  &-5{
+    height:30em;
+    background:violet
+  }
+  &-6{
+    height:30em;
+    background:yellow
   }
 }
 

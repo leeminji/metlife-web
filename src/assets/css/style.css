@@ -8,8 +8,8 @@ body.no{overflow:hidden}
 .section{width:94em;margin:0 auto;position:relative;}
 .section:after{content:'';display:block;clear:both}
 .container{overflow:hidden;}
-.blind{display:none;position:absolute;z-index:1000;left:0;top:0;right:0;bottom:0;background:url(../images/common/bg_black50.png)}
-@media only screen and (max-width:94em){
+.blind{display:none;position:absolute;z-index:1000;left:0;top:0;right:0;bottom:0;background:url(~@/assets/images/common/bg_black50.png)}
+@media only screen and (max-width:95em){
 	.allwrap{min-width: 100%}
 	.section{width:100%;}
 }
