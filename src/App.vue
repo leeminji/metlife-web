@@ -74,7 +74,7 @@
 <script>
 import Header from './components/Header.vue'
 export default {
-  data(){
+  data : function(){
     return {
       menuList : null,
       sections : null
@@ -84,9 +84,9 @@ export default {
   components: {
     Header
   },
-  mounted(){
+  mounted : function(){
   },
-  created(){
+  created : function(){
   }
 }
 </script>

@@ -23,7 +23,7 @@
 export default {
   name: 'headerComponent',
   props: ["menuList"],
-  data(){
+  data : function(){
     return {
       header : null,
       sectionList : [],
@@ -31,10 +31,10 @@ export default {
       isScrolling : false
     }
   },
-  created(){
+  created : function(){
 
   },
-  mounted(){
+  mounted : function(){
     this.header = document.querySelector(".Header");
     
     //스크롤이벤트
@@ -47,7 +47,7 @@ export default {
     this.setAnimation(this.currentIndex);
   },
   methods : {
-    handleGotoSection(e){
+    handleGotoSection: function(e){
       e.preventDefault();
       if( e.currentTarget == null ) return;
       this.isScrolling = true;
@@ -59,10 +59,10 @@ export default {
       //메뉴이동
       TweenMax.to(window, 1, {scrollTo:{y:hash}, onComplete : this.onCompleteGotoSection});
     },
-    onCompleteGotoSection(){
+    onCompleteGotoSection: function(){
       this.isScrolling = false;
     },
-    handleScroll(e){
+    handleScroll : function(e){
       let offset = this.header.offsetTop + this.header.clientHeight;
       if( window.scrollY > offset ){
         this.header.classList.add("active");
@@ -79,7 +79,7 @@ export default {
       //console.log(this.currentIndex);
     },
     //현재 스크롤의 섹션값 알아내기
-    getWindowScrollSection(y){
+    getWindowScrollSection: function(y){
        let findIndex = 0;
        for( let i =0; i<this.sectionList.length; i++){
          let prePosition = i-1 < 0 ? 0 : this.sectionList[i-1];
@@ -94,7 +94,7 @@ export default {
        }
       return findIndex;
     },
-    setAnimation(index){
+    setAnimation: function(index){
       if( this.isScrolling ) return;
       TweenMax.killAll();
       switch(index){
